@@ -2,18 +2,21 @@ import QtQuick 2.15
 import QtQuick.Window 2.15
 
 Window {
+    width: 800
+    height: 800
     visible: true
-    visibility: Window.FullScreen
-    title: qsTr("hello world")
+    title: qsTr("Hello World")
 
     Rectangle{
+        width: parent.width
+        height: parent.height
         color: "red"
-        anchors.fill: parent
         Text{
             anchors.centerIn:parent
             text:"HELLO!"
             font.bold: true
-            font.pixelSize: 35
+            font.pixelSize: 50
         }
+
     }
 }
