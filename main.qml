@@ -2,8 +2,8 @@ import QtQuick 2.15
 import QtQuick.Window 2.15
 
 Window {
-    width: 800
-    height: 800
+    width: 640
+    height: 480
     visible: true
     title: qsTr("Hello World")
 
@@ -15,7 +15,7 @@ Window {
             anchors.centerIn:parent
             text:"HELLO!"
             font.bold: true
-            font.pixelSize: 50
+            font.pixelSize: 35
         }
 
     }
