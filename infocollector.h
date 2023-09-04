@@ -48,21 +48,21 @@ public:
             srandom ((unsigned) time (NULL));
             subscriber.connect("tcp://localhost:5556");
             std::stringstream ss;
-            ss << "2";
+            ss << "SENSORS";
             std::cout << "topic:" << ss.str() << std::endl;
             subscriber.setsockopt( ZMQ_SUBSCRIBE, ss.str().c_str(), ss.str().size());
 
             while(1){
-                m_value0 = "BlankSpot-"+QString::number(n);
+                std::string topic = s_recv (subscriber);
+                std::string data = s_recv (subscriber);
+                //std::cout << data << std::endl;
+
+                m_value0 = data.data();
                 m_value1 = "BlankSpot-"+QString::number(n);
                 m_value2 = "BlankSpot-"+QString::number(n);
                 m_value3 = "BlankSpot-"+QString::number(n);
                 m_value4 = "BlankSpot-"+QString::number(n);
                 m_value5 = "BlankSpot-"+QString::number(n);
-
-                std::string topic = s_recv (subscriber);
-                std::string data = s_recv (subscriber);
-                std::cout << data << std::endl;
 
                 QThread::sleep(1);
                 qDebug() << n ;
