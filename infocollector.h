@@ -71,9 +71,9 @@ public:
                 m_value4 = "BlankSpot-"+QString::number(n);
                 m_value5 = "BlankSpot-"+QString::number(n);
 
-                //QThread::sleep(1);
+                QThread::sleep(1);
                 //qDebug() << "Sensors Update counter: " << n ;
-                //n++;
+                n++;
 
                 emit priorityChanged0(m_value0);
                 emit priorityChanged1(m_value1);
