@@ -60,8 +60,6 @@ public:
                 std::string data = s_recv (subscriber);
                 //std::cout << data << std::endl;
 
-                m_value0 = data.data();
-
                 if (topic == "BUTTON")
                     m_value0 = data.data();
 
