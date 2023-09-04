@@ -46,7 +46,8 @@ public:
             zmq::socket_t subscriber (context, ZMQ_SUB);
             //  Initialize random number generator
             srandom ((unsigned) time (NULL));
-            subscriber.connect("tcp://localhost:5556");
+            subscriber.connect("tcp://localhost:5554");
+            subscriber.connect("tcp://localhost:5557"); 
             std::stringstream ss;
             ss << "BUTTON";
             subscriber.setsockopt( ZMQ_SUBSCRIBE, ss.str().c_str(), ss.str().size());
