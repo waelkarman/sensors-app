@@ -47,10 +47,12 @@ public:
             //  Initialize random number generator
             srandom ((unsigned) time (NULL));
             subscriber.connect("tcp://localhost:5556");
-//            std::stringstream ss;
-//            ss << "SENSORS";
-//            std::cout << "topic:" << ss.str() << std::endl;
+            std::stringstream ss;
+            ss << "BUTTON";
             subscriber.setsockopt( ZMQ_SUBSCRIBE, ss.str().c_str(), ss.str().size());
+            std::stringstream sss;
+            ss << "PASSIVEBUZZER";
+            subscriber.setsockopt( ZMQ_SUBSCRIBE, sss.str().c_str(), sss.str().size());
 
             while(1){
                 std::string topic = s_recv (subscriber);
