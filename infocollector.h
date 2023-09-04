@@ -47,9 +47,9 @@ public:
             //  Initialize random number generator
             srandom ((unsigned) time (NULL));
             subscriber.connect("tcp://localhost:5556");
-            std::stringstream ss;
-            ss << "SENSORS";
-            std::cout << "topic:" << ss.str() << std::endl;
+//            std::stringstream ss;
+//            ss << "SENSORS";
+//            std::cout << "topic:" << ss.str() << std::endl;
             subscriber.setsockopt( ZMQ_SUBSCRIBE, ss.str().c_str(), ss.str().size());
 
             while(1){
@@ -58,14 +58,23 @@ public:
                 //std::cout << data << std::endl;
 
                 m_value0 = data.data();
-                m_value1 = "BlankSpot-"+QString::number(n);
+
+                if (topic == "BUTTON")
+                    m_value0 = data.data();
+                else
+                    m_value0 = "BlankSpot-"+QString::number(n);
+
+                if (topic == "PASSIVEBUZZER")
+                    m_value1 =  data.data();
+                else
+                    m_value1 = "BlankSpot-"+QString::number(n);
                 m_value2 = "BlankSpot-"+QString::number(n);
                 m_value3 = "BlankSpot-"+QString::number(n);
                 m_value4 = "BlankSpot-"+QString::number(n);
                 m_value5 = "BlankSpot-"+QString::number(n);
 
                 QThread::sleep(1);
-                qDebug() << n ;
+                //qDebug() << "Sensors Update counter: " << n ;
                 n++;
 
                 emit priorityChanged0(m_value0);
