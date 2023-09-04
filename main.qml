@@ -1,13 +1,20 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Layouts 1.15
-
+import infoCollector 1.0
 
 Window {
     width: 640
     height: 480
     visible: true
     title: qsTr("Hello World")
+
+    property string value0: disp0.m_value0
+    property string value1: disp0.m_value1
+    property string value2: disp0.m_value2
+    property string value3: disp0.m_value3
+    property string value4: disp0.m_value4
+    property string value5: disp0.m_value5
 
     Rectangle{
         id:layer0
@@ -34,39 +41,42 @@ Window {
             anchors.left: parent.left
             columns: 3
             
+            Infodispencer{
+                id:disp0
+            }
 
             Text{ 
-                text: "blank"
+                text: value0
                 font.bold: true
                 Layout.alignment : Qt.AlignHCenter                
             }
 
             Text{ 
-                text: "blank"
+                text: value1
                 font.bold: true
                 Layout.alignment : Qt.AlignHCenter                
             }
 
             Text{ 
-                text: "blank"
+                text: value2
                 font.bold: true
                 Layout.alignment : Qt.AlignHCenter                
             }
 
             Text{ 
-                text: "blank"
+                text: value3
                 font.bold: true
                 Layout.alignment : Qt.AlignHCenter                
             }
 
             Text{ 
-                text: "blank"
+                text: value4
                 font.bold: true
                 Layout.alignment : Qt.AlignHCenter                
             }
 
             Text{ 
-                text: "blank"
+                text: value5
                 font.bold: true
                 Layout.alignment : Qt.AlignHCenter                
             }

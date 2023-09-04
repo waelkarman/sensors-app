@@ -5,7 +5,11 @@ QT += quick
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        main.cpp
+        infocollector.cpp \
+        main.cpp \
+        zmqprocess.cpp
+
+LIBS += -lzmq -lzmqpp
 
 RESOURCES += qml.qrc
 
@@ -18,3 +22,8 @@ QML_DESIGNER_IMPORT_PATH =
 # Default rules for deployment.
 target.path = /home/root
 INSTALLS += target
+
+HEADERS += \
+    infocollector.h \
+    zhelpers.h \
+    zmqprocess.h
