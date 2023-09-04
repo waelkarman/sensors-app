@@ -64,13 +64,10 @@ public:
 
                 if (topic == "BUTTON")
                     m_value0 = data.data();
-                else
-                    m_value0 = "BlankSpot-"+QString::number(n);
 
                 if (topic == "PASSIVEBUZZER")
                     m_value1 =  data.data();
-                else
-                    m_value1 = "BlankSpot-"+QString::number(n);
+
                 m_value2 = "BlankSpot-"+QString::number(n);
                 m_value3 = "BlankSpot-"+QString::number(n);
                 m_value4 = "BlankSpot-"+QString::number(n);
