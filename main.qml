@@ -1,7 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Layouts 1.15
-import infoCollector 1.0
+import infoExchanger 1.0
 
 Window {
     width: 640
@@ -15,6 +15,7 @@ Window {
     property string value3: disp0.m_value3
     property string value4: disp0.m_value4
     property string value5: disp0.m_value5
+    property string value6: disp0.m_value6
 
     Rectangle{
         id:layer0
@@ -22,6 +23,10 @@ Window {
         height: parent.height
         color: "white"
         
+        Infodispencer{
+            id:disp0
+        }
+
         Text{
             id: title0
             anchors.horizontalCenter: parent.horizontalCenter
@@ -41,7 +46,7 @@ Window {
             text: value0
             color: "black"
             font.bold: true
-            font.pixelSize: 15
+            font.pixelSize: 13
         }
 
         GridLayout {
@@ -51,10 +56,6 @@ Window {
             anchors.right: parent.right
             anchors.left: parent.left
             columns: 3
-            
-            Infodispencer{
-                id:disp0
-            }
 
             Text{ 
                 text: value1
@@ -65,7 +66,17 @@ Window {
             Text{ 
                 text: value2
                 font.bold: true
-                Layout.alignment : Qt.AlignHCenter                
+                Layout.alignment : Qt.AlignHCenter
+                MouseArea{
+                    anchors.fill:parent
+                    onPressed:{
+                        disp0.m_value2="ON"
+                    }
+                    onReleased:{
+                        disp0.m_value2="OFF"
+                    }
+                }
+
             }
 
             Text{ 
@@ -86,11 +97,11 @@ Window {
                 Layout.alignment : Qt.AlignHCenter                
             }
 
-//            Text{
-//                text: value5
-//                font.bold: true
-//                Layout.alignment : Qt.AlignHCenter
-//            }
+            Text{
+                text: value6
+                font.bold: true
+                Layout.alignment : Qt.AlignHCenter
+            }
 
         }
 

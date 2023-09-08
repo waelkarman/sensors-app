@@ -2,6 +2,3 @@
 
 
 
-void ZMQprocess::process(){
-    qDebug("Hello World!");
-}

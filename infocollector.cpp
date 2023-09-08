@@ -1,1 +1,0 @@
-#include "infocollector.h"

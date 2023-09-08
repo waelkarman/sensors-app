@@ -1,12 +1,12 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-#include "infocollector.h"
+#include "infoexchanger.h"
 
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
-    qmlRegisterType<infoCollector>("infoCollector", 1, 0, "Infodispencer");
+    qmlRegisterType<infoExchanger>("infoExchanger", 1, 0, "Infodispencer");
 
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/main.qml"));

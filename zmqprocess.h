@@ -10,7 +10,7 @@ public:
     ZMQprocess(){}
 
 public slots:
-    void process();
+    //void process();
 
 };
 
