@@ -7,7 +7,7 @@ Window {
     width: 640
     height: 480
     visible: true
-    title: qsTr("Hello World")
+    title: qsTr("Sensors & Informations")
 
     property string value0: disp0.m_value0
     property string value1: disp0.m_value1

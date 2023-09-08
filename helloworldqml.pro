@@ -20,7 +20,7 @@ QML_IMPORT_PATH =
 QML_DESIGNER_IMPORT_PATH =
 
 # Default rules for deployment.
-target.path = /home/root
+target.path = /usr/bin
 INSTALLS += target
 
 HEADERS += \
