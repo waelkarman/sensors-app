@@ -33,6 +33,17 @@ Window {
             font.pixelSize: 35
         }
 
+        Text{
+            id: networkinfo
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.top: title0.bottom
+            anchors.topMargin: 30
+            text: value0
+            color: "black"
+            font.bold: true
+            font.pixelSize: 15
+        }
+
         GridLayout {
             id: grid
             anchors.top: title0.bottom
@@ -43,12 +54,6 @@ Window {
             
             Infodispencer{
                 id:disp0
-            }
-
-            Text{ 
-                text: value0
-                font.bold: true
-                Layout.alignment : Qt.AlignHCenter                
             }
 
             Text{ 
@@ -80,6 +85,12 @@ Window {
                 font.bold: true
                 Layout.alignment : Qt.AlignHCenter                
             }
+
+//            Text{
+//                text: value5
+//                font.bold: true
+//                Layout.alignment : Qt.AlignHCenter
+//            }
 
         }
 

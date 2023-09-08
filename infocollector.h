@@ -60,14 +60,16 @@ public:
                 std::string data = s_recv (subscriber);
                 //std::cout << data << std::endl;
 
+                if (topic == "NETWORK"){
+                    m_value0 =  data.data();
+                    emit priorityChanged1(m_value0);
+                }
+
                 if (topic == "BUTTON"){
-                    m_value0 = data.data();
-                    emit priorityChanged0(m_value0);
+                    m_value1 = data.data();
+                    emit priorityChanged0(m_value1);
                 }
-                if (topic == "PASSIVEBUZZER"){
-                    m_value1 =  data.data();
-                    emit priorityChanged1(m_value1);
-                }
+
                 //m_value2 = "BlankSpot-"+QString::number(n);
                 //m_value3 = "BlankSpot-"+QString::number(n);
                 //m_value4 = "BlankSpot-"+QString::number(n);
