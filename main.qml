@@ -70,10 +70,10 @@ Window {
                 MouseArea{
                     anchors.fill:parent
                     onPressed:{
-                        disp0.m_value2="ON"
+                        disp0.m_value2="Buzzer ON"
                     }
                     onReleased:{
-                        disp0.m_value2="OFF"
+                        disp0.m_value2="Buzzer OFF"
                     }
                 }
 

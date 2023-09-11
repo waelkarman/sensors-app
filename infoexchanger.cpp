@@ -4,7 +4,7 @@
 infoExchanger::infoExchanger(QString defaultval,QObject *parent){
     m_value0 = "Network service unreachable";
     m_value1 = defaultval;
-    m_value2 = defaultval;
+    m_value2 = "Buzzer OFF";
     m_value3 = defaultval;
     m_value4 = defaultval;
     m_value5 = defaultval;
