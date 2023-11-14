@@ -51,58 +51,83 @@ Window {
 
         GridLayout {
             id: grid
-            anchors.top: title0.bottom
+            anchors.top: networkinfo.bottom
             anchors.bottom: parent.bottom
             anchors.right: parent.right
             anchors.left: parent.left
+
             columns: 3
 
-            Text{ 
-                text: value1
-                font.bold: true
-                Layout.alignment : Qt.AlignHCenter                
+            Item{
+                Layout.preferredHeight: parent.height/2
+                Layout.preferredWidth: parent.width/3
+                Text{
+                    anchors.centerIn: parent
+                    text: value1
+                    font.bold: true
+                }
             }
 
-            Text{ 
-                text: value2
-                font.bold: true
-                Layout.alignment : Qt.AlignHCenter
-                MouseArea{
-                    anchors.fill:parent
-                    onPressed:{
-                        disp0.m_value2="Buzzer ON"
-                    }
-                    onReleased:{
-                        disp0.m_value2="Buzzer OFF"
+            Item{
+                Layout.preferredHeight: parent.height/2
+                Layout.preferredWidth: parent.width/3
+                Text{
+                    text: value2
+                    font.bold: true
+                    anchors.centerIn: parent
+
+                    MouseArea{
+                        anchors.fill:parent
+                        onPressed:{
+                            disp0.m_value2="Buzzer ON"
+                        }
+                        onReleased:{
+                            disp0.m_value2="Buzzer OFF"
+                        }
                     }
                 }
-
             }
 
-            Text{ 
-                text: value3
-                font.bold: true
-                Layout.alignment : Qt.AlignHCenter                
+            Item{
+                Layout.preferredHeight: parent.height/2
+                Layout.preferredWidth: parent.width/3
+                Text{
+                    anchors.centerIn: parent
+                    text: value3
+                    font.bold: true
+                }
             }
 
-            Text{ 
-                text: value4
-                font.bold: true
-                Layout.alignment : Qt.AlignHCenter                
+
+            Item{
+                Layout.preferredHeight: parent.height/2
+                Layout.preferredWidth: parent.width/3
+                Text{
+                    anchors.centerIn: parent
+                    text: value4
+                    font.bold: true
+                }
             }
 
-            Text{ 
-                text: value5
-                font.bold: true
-                Layout.alignment : Qt.AlignHCenter                
+            Item{
+                Layout.preferredHeight: parent.height/2
+                Layout.preferredWidth: parent.width/3
+                Text{
+                    anchors.centerIn: parent
+                    text: value5
+                    font.bold: true
+                }
             }
 
-            Text{
-                text: value6
-                font.bold: true
-                Layout.alignment : Qt.AlignHCenter
+            Item{
+                Layout.preferredHeight: parent.height/2
+                Layout.preferredWidth: parent.width/3
+                Text{
+                    anchors.centerIn: parent
+                    text: value6
+                    font.bold: true
+                }
             }
-
         }
 
     }
