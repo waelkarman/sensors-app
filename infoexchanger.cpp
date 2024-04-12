@@ -24,7 +24,7 @@ infoExchanger::infoExchanger(QString defaultval,QObject *parent){
         ss << "BUTTON";
         subscriber.setsockopt( ZMQ_SUBSCRIBE, ss.str().c_str(), ss.str().size());
         std::stringstream sss;
-        ss << "NETWORK";
+        sss << "NETWORK";
         subscriber.setsockopt( ZMQ_SUBSCRIBE, sss.str().c_str(), sss.str().size());
 
 
