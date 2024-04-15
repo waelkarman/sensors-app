@@ -13,7 +13,7 @@ void buttonMessageProcessor::run(){
     zmq::socket_t subscriber (context, ZMQ_SUB);
     subscriber.connect("tcp://localhost:5554");
 
-    const string topic = "Button";
+    const string topic = "BUTTON";
     subscriber.setsockopt( ZMQ_SUBSCRIBE, topic.c_str(), topic.size());
 
 
