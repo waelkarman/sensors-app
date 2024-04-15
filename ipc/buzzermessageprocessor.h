@@ -4,19 +4,19 @@
 
 using namespace std;
 
-class networkMessageProcessor : public QThread
+class buzzerMessageProcessor : public QThread
 {
     Q_OBJECT
-    Q_PROPERTY(QString networkstat READ getNetworkstat NOTIFY networkstatChanged)
+    Q_PROPERTY(QString buzzerstat READ getBuzzerstat NOTIFY buzzerstatChanged)
 
 public:
-    networkMessageProcessor();
-    QString getNetworkstat();
+    buzzerMessageProcessor();
+    QString getBuzzerstat();
 
 signals:
-    void networkstatChanged();
+    void buzzerstatChanged();
 
 private:
     void run() override;
-    QString networkstat = "";
+    QString buzzerstat = "";
 };

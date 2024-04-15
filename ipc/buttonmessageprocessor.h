@@ -18,5 +18,5 @@ signals:
 
 private:
     void run() override;
-    QString buttonstat = "";
+    QString buttonstat = "Released";
 };

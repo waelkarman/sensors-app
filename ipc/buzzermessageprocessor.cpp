@@ -1,31 +1,27 @@
-#include "networkmessageprocessor.h"
+#include "buzzermessageprocessor.h"
 #include <zhelpers.h>
 #include <zmq.hpp>
 #include <zmqprocess.h>
 
-networkMessageProcessor::networkMessageProcessor() {
+buzzerMessageProcessor::buzzerMessageProcessor() {
     this->start();
 }
 
-void networkMessageProcessor::run(){
+void buzzerMessageProcessor::run(){
 
     zmq::context_t context(1);
-    zmq::socket_t subscriber (context, ZMQ_SUB);
-    subscriber.connect("tcp://localhost:5557");
-
-    const string topic = "NETWORK";
-    subscriber.setsockopt( ZMQ_SUBSCRIBE, topic.c_str(), topic.size());
-
+    zmq::socket_t publisher(context, ZMQ_PUB);
+    srandom ((unsigned) time (NULL));
+    publisher.bind("tcp://*:5560");
 
     while(1){
-        std::string topic = s_recv (subscriber);
-        std::string data = s_recv (subscriber);
-        networkstat =  data.data();
-        emit networkstatChanged();
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        s_sendmore (publisher, "PASSIVEBUZZER");
+        s_send (publisher, &buzzerstat.toStdString()[0]);
     }
 };
 
 
-QString networkMessageProcessor::getNetworkstat(){
-    return networkstat;
+QString buzzerMessageProcessor::getBuzzerstat(){
+    return buzzerstat;
 };

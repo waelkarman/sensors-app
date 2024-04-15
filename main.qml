@@ -62,7 +62,7 @@ Item {
                 Layout.preferredWidth: parent.width/3
                 Text{
                     anchors.centerIn: parent
-                    text: value1
+                    text: btm.buttonstat
                     font.bold: true
                 }
             }

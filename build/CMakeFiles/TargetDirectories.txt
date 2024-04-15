@@ -1,8 +1,0 @@
-/home/waelkarman/Documents/sensors-app/build/CMakeFiles/install/strip.dir
-/home/waelkarman/Documents/sensors-app/build/CMakeFiles/install/local.dir
-/home/waelkarman/Documents/sensors-app/build/CMakeFiles/install.dir
-/home/waelkarman/Documents/sensors-app/build/CMakeFiles/list_install_components.dir
-/home/waelkarman/Documents/sensors-app/build/CMakeFiles/rebuild_cache.dir
-/home/waelkarman/Documents/sensors-app/build/CMakeFiles/edit_cache.dir
-/home/waelkarman/Documents/sensors-app/build/CMakeFiles/sensor-app.dir
-/home/waelkarman/Documents/sensors-app/build/CMakeFiles/sensor-app_autogen.dir
