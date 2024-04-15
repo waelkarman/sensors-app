@@ -9,8 +9,7 @@ class ZMQprocess : public QObject
 public:
     ZMQprocess(){}
 
-public slots:
-    //void process();
+
 
 };
 

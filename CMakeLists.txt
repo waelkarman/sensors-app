@@ -8,35 +8,29 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 
-find_package(Qt6 REQUIRED COMPONENTS Core Gui Qml Quick Sql)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Qml Quick)
 
 set(SOURCES
     main.qrc
-    infoexchanger.cpp
     main.cpp
-    zmqprocess.cpp
 )
 
-set(HEADERS
-    infoexchanger.h
-    zhelpers.h
-    zmqprocess.h
-)
+set(HEADERS)
 
 qt_add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES})
+
+add_subdirectory(ipc)
 
 target_include_directories(${PROJECT_NAME} PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 target_link_libraries(${PROJECT_NAME} PUBLIC
-    zmq
-    zmqpp
+    ipc
     Qt6::Core
     Qt6::Gui
     Qt6::Qml
     Qt6::Quick
-    Qt6::Sql
 )
 
 install(TARGETS ${PROJECT_NAME} DESTINATION bin)

@@ -1,21 +1,20 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Layouts 1.15
-import infoExchanger 1.0
+//import infoExchanger 1.0
 
-Window {
+Item {
     width: 640
     height: 480
     visible: true
-    title: qsTr("Sensors & Informations")
 
-    property string value0: disp0.m_value0
-    property string value1: disp0.m_value1
-    property string value2: disp0.m_value2
-    property string value3: disp0.m_value3
-    property string value4: disp0.m_value4
-    property string value5: disp0.m_value5
-    property string value6: disp0.m_value6
+    property string value0: "sample" //disp0.m_value0
+    property string value1: "sample" //disp0.m_value1
+    property string value2: "sample" //disp0.m_value2
+    property string value3: "sample" //disp0.m_value3
+    property string value4: "sample" //disp0.m_value4
+    property string value5: "sample" //disp0.m_value5
+    property string value6: "sample" //disp0.m_value6
 
     Rectangle{
         id:layer0
@@ -23,9 +22,9 @@ Window {
         height: parent.height
         color: "white"
         
-        Infodispencer{
-            id:disp0
-        }
+        // Infodispencer{
+        //     id:disp0
+        // }
 
         Text{
             id: title0
@@ -43,10 +42,10 @@ Window {
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.top: title0.bottom
             anchors.topMargin: 30
-            text: value0
             color: "black"
             font.bold: true
             font.pixelSize: 13
+            text: nm.networkstat
         }
 
         GridLayout {
@@ -79,10 +78,10 @@ Window {
                     MouseArea{
                         anchors.fill:parent
                         onPressed:{
-                            disp0.m_value2="Buzzer ON"
+                            //disp0.m_value2="Buzzer ON"
                         }
                         onReleased:{
-                            disp0.m_value2="Buzzer OFF"
+                            //disp0.m_value2="Buzzer OFF"
                         }
                     }
                 }
@@ -132,7 +131,10 @@ Window {
 
     }
 
-
-
-
+    // Connections {
+    //     target: nm
+    //     function onNetworkstatChanged(value) {
+    //         networkinfo.text=value
+    //     }
+    // }
 }

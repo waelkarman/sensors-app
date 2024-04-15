@@ -1,25 +1,38 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-#include "infoexchanger.h"
+#include <QQmlEngine>
+#include <QQmlFileSelector>
+#include <QQuickView>
+#include <QDebug>
+#include <QQmlContext>
+#include "networkmessageprocessor.h"
 
 int main(int argc, char *argv[])
 {
+
+
+    networkMessageProcessor nm;
+
+
+
+
+
+
+
+    QCoreApplication::setApplicationName("Sensors & Informations");
     QGuiApplication app(argc, argv);
 
-    qmlRegisterType<infoExchanger>("infoExchanger", 1, 0, "Infodispencer");
+    //qmlRegisterType<infoExchanger>("infoExchanger", 1, 0, "Infodispencer");
+    QQuickView view;
+    view.connect(view.engine(), &QQmlEngine::quit, &app, &QCoreApplication::quit);
+    view.rootContext()->setContextProperty("nm", &nm);
+    view.setSource(QUrl("qrc:/main.qml"));
 
-    QQmlApplicationEngine engine;
-    const QUrl url(QStringLiteral("qrc:/main.qml"));
+    if (view.status() == QQuickView::Error)
+        return -1;
 
-    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-                     &app, [url](QObject *obj, const QUrl &objUrl) {
-
-        if (!obj && url == objUrl)
-            QCoreApplication::exit(-1);
-
-    }, Qt::QueuedConnection);
-
-    engine.load(url);
+    view.setResizeMode(QQuickView::SizeRootObjectToView);
+    view.show();
 
     return app.exec();
 }
