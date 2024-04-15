@@ -1,0 +1,110 @@
+{
+	"BUILD_DIR" : "/home/waelkarman/Documents/sensors-app/build/sensor-app_autogen",
+	"CMAKE_BINARY_DIR" : "/home/waelkarman/Documents/sensors-app/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/waelkarman/Documents/sensors-app/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/waelkarman/Documents/sensors-app",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_SOURCE_DIR" : "/home/waelkarman/Documents/sensors-app",
+	"HEADERS" : 
+	[
+		[
+			"/home/waelkarman/Documents/sensors-app/infoexchanger.h",
+			"MU",
+			"EWIEGA46WW/moc_infoexchanger.cpp"
+		],
+		[
+			"/home/waelkarman/Documents/sensors-app/zhelpers.h",
+			"MU",
+			"EWIEGA46WW/moc_zhelpers.cpp"
+		],
+		[
+			"/home/waelkarman/Documents/sensors-app/zmqprocess.h",
+			"MU",
+			"EWIEGA46WW/moc_zmqprocess.cpp"
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/waelkarman/Documents/sensors-app/build/sensor-app_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/waelkarman/Documents/sensors-app/build/sensor-app_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NETWORK_LIB",
+		"QT_NO_DEBUG",
+		"QT_OPENGL_LIB",
+		"QT_QMLINTEGRATION_LIB",
+		"QT_QMLMODELS_LIB",
+		"QT_QML_LIB",
+		"QT_QUICK_LIB",
+		"QT_SQL_LIB"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/waelkarman/Documents/sensors-app",
+		"/home/waelkarman/Qt/6.6.3/gcc_64/include/QtCore",
+		"/home/waelkarman/Qt/6.6.3/gcc_64/include",
+		"/home/waelkarman/Qt/6.6.3/gcc_64/mkspecs/linux-g++",
+		"/home/waelkarman/Qt/6.6.3/gcc_64/include/QtGui",
+		"/home/waelkarman/Qt/6.6.3/gcc_64/include/QtQml",
+		"/home/waelkarman/Qt/6.6.3/gcc_64/include/QtQmlIntegration",
+		"/home/waelkarman/Qt/6.6.3/gcc_64/include/QtNetwork",
+		"/home/waelkarman/Qt/6.6.3/gcc_64/include/QtQuick",
+		"/home/waelkarman/Qt/6.6.3/gcc_64/include/QtQmlModels",
+		"/home/waelkarman/Qt/6.6.3/gcc_64/include/QtOpenGL",
+		"/home/waelkarman/Qt/6.6.3/gcc_64/include/QtSql",
+		"/usr/include",
+		"/usr/include/c++/9",
+		"/usr/include/x86_64-linux-gnu/c++/9",
+		"/usr/include/c++/9/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/9/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu"
+	],
+	"MOC_MACRO_NAMES" : 
+	[
+		"Q_OBJECT",
+		"Q_GADGET",
+		"Q_NAMESPACE",
+		"Q_GADGET_EXPORT",
+		"Q_NAMESPACE_EXPORT"
+	],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : true,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/waelkarman/Documents/sensors-app/build/sensor-app_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 14,
+	"PARSE_CACHE_FILE" : "/home/waelkarman/Documents/sensors-app/build/CMakeFiles/sensor-app_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/home/waelkarman/Qt/6.6.3/gcc_64/./libexec/moc",
+	"QT_UIC_EXECUTABLE" : "",
+	"QT_VERSION_MAJOR" : 6,
+	"SETTINGS_FILE" : "/home/waelkarman/Documents/sensors-app/build/CMakeFiles/sensor-app_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[ "/home/waelkarman/Documents/sensors-app/infoexchanger.cpp", "MU" ],
+		[ "/home/waelkarman/Documents/sensors-app/main.cpp", "MU" ],
+		[ "/home/waelkarman/Documents/sensors-app/zmqprocess.cpp", "MU" ]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}
