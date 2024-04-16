@@ -23,7 +23,7 @@ void buzzerMessageProcessor::run(){
     while(1){
         s_sendmore (publisher, topic);
         s_send (publisher, &buzzerstat.toStdString()[0]);
-        sleep(std::chrono::milliseconds(50));
+        usleep(500);
     }
 }
 
