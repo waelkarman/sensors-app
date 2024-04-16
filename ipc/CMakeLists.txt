@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 
 project(ipc)
 set(CMAKE_CXX_STANDARD 17)
-find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui)
 
 set(SOURCES
     networkmessageprocessor.cpp
@@ -26,4 +26,5 @@ target_link_libraries(${PROJECT_NAME}
     zmq
     zmqpp
     Qt6::Core
+    Qt6::Gui
 )

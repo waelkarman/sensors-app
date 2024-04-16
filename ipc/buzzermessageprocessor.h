@@ -11,6 +11,8 @@ class buzzerMessageProcessor : public QThread
 
 public:
     buzzerMessageProcessor();
+    //FIXME
+    Q_INVOKABLE void setBuzzerstat(QString stat);
     QString getBuzzerstat();
 
 signals:
@@ -18,5 +20,5 @@ signals:
 
 private:
     void run() override;
-    QString buzzerstat = "";
+    QString buzzerstat;
 };

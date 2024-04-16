@@ -71,18 +71,17 @@ Item {
                 Layout.preferredHeight: parent.height/2
                 Layout.preferredWidth: parent.width/3
                 Text{
-                    text: value2
+                    text: bzm.buzzerstat
                     font.bold: true
                     anchors.centerIn: parent
-
-                    MouseArea{
-                        anchors.fill:parent
-                        onPressed:{
-                            //disp0.m_value2="Buzzer ON"
-                        }
-                        onReleased:{
-                            //disp0.m_value2="Buzzer OFF"
-                        }
+                }
+                MouseArea{
+                    anchors.fill:parent
+                    onPressed:{
+                        bzm.setBuzzerstat("Buzzer ON")
+                    }
+                    onReleased:{
+                        bzm.setBuzzerstat("Buzzer OFF")
                     }
                 }
             }
