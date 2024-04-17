@@ -1,7 +1,6 @@
 #include "networkmessageprocessor.h"
 #include <zhelpers.h>
 #include <zmq.hpp>
-#include <zmqprocess.h>
 
 networkMessageProcessor::networkMessageProcessor() {
     this->start();

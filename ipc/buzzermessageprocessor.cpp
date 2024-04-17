@@ -1,7 +1,6 @@
 #include "buzzermessageprocessor.h"
 #include <zhelpers.h>
 #include <zmq.hpp>
-#include <zmqprocess.h>
 
 buzzerMessageProcessor::buzzerMessageProcessor():buzzerstat("Buzzer OFF"){
     this->start();

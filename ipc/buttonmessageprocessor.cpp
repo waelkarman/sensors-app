@@ -1,7 +1,6 @@
 #include "buttonmessageprocessor.h"
 #include <zhelpers.h>
 #include <zmq.hpp>
-#include <zmqprocess.h>
 
 buttonMessageProcessor::buttonMessageProcessor() {
     this->start();
