@@ -2,7 +2,7 @@
 The sensors-app is not a stanalone app but requires the sensor services to work.<br>
 The following diagram shows the summary of the communication layout implemented into the sensors-app.
 
-<img src="miscellaneous/sensorappipc.png" width="400" height="300">
+<img src="https://github.com/waelkarman/bunch-linux-manifests/blob/main/docs/miscellaneous/sensorappipc.png" width="400" height="300">
 
 Wiring:<br>
 > GPIO[17] for Passive Buzzer signal<br/>
