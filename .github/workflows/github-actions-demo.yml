@@ -18,7 +18,7 @@ jobs:
           version: '6.6.3'
       - name: Install required libs
         run: |
-          sudo apt-get install libzmq3-dev zmqpp
+          sudo apt-get install libzmq3-dev libzmqpp-dev
           sudo ln -s /usr/lib/x86_64-linux-gnu/libicui18n.so.70 /usr/lib/x86_64-linux-gnu/libicui18n.so.56
           sudo ln -s /usr/lib/x86_64-linux-gnu/libicui18n.so.70 /usr/lib/x86_64-linux-gnu/libicui18n.so.56.1
           sudo ln -s /usr/lib/x86_64-linux-gnu/libicuuc.so.70 /usr/lib/x86_64-linux-gnu/libicuuc.so.56
