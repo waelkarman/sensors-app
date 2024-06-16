@@ -3,7 +3,7 @@ This app is integrated in [bunch-linux](https://github.com/waelkarman/bunch-linu
 
 <img src="doc/screen.png" width="450" height="350">
 
-The sensors-app is not a stanalone app. It requires the sensors services to work.<br>
+The sensors-app is not a standalone app. It requires the sensors services to work.<br>
 The following diagram shows the summary of the communication layout implemented into the sensors-app.
 
 <img src="https://github.com/waelkarman/bunch-linux-manifests/blob/main/docs/miscellaneous/sensorappipc.png" width="400" height="300">
